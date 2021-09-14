@@ -5,17 +5,123 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
+    <title>首页</title>
+    <link rel="stylesheet" href="../train/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="content">
-        <p>
-            index.html
-        </p>
-        <a href="./a.html">ToA</a> <br>
-        <a href="./b.html">ToB</a>
+
+    <div class="trainOne">
+        <div class="header">
+            <p class="web_title">企业站</p>
+            <div class="rightNav">
+                <nav class="navbar navbar-expand-lg navbar-dark">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse" id="navbarText">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">
+                                        <i class="bi bi-house"></i> 首页
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="bi bi-newspaper"></i>新闻
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <i class="bi bi-question-circle"></i>关于我们
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="bodys">
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../train/asset/asset/banner_01_1080p.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../train/asset/asset/banner_02_1080p.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="../train/asset/asset/banner_03_1080p.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="service_scope">
+                <div>
+                    <div class="line_one">
+                        服务范围
+                    </div>
+                </div>
+                <div class="service_body">
+                    <ul>
+                        <li>
+                            <img src="../train/asset/asset/section_01_1080p.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="../train/asset/asset/section_02_1080p.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="../train/asset/asset/section_03_1080p.jpg" alt="">
+                        </li>
+                        <li>
+                            <img src="../train/asset/asset/section_04_1080p.jpg" alt="">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            3
+        </div>
     </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+        function Axios(type = 'GET', url, param = null) {
+            if (type == 'POST') {
+                return new Promise((resolve, reject) => {
+                    axios.post(url, param && {...param
+                        })
+                        .then(res => resolve(res))
+                        .catch(err => reject(err))
+                })
+            } else {
+                return new Promise((resovle, reject) => {
+                    axios.get(url, param && {
+                            params: {...param
+                            }
+                        })
+                        .then(res => resovle(res))
+                        .catch(err => reject(err))
+                })
+            }
+        }
+        const baseUrl = 'http://mock-api.com/ln0epdKR.mock/api/v1/rest/counts'
+        window.onload = function() {
+            Axios('GET', baseUrl, {
+                age: 11
+            }).then(res => console.log(res)).catch(err => console.log(err))
+        }
+    </script>
+
 </body>
 
 </html>

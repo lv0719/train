@@ -19,7 +19,6 @@ html ,body {
         width: 1200px;
         height: auto;
         margin: 0 auto;
-        border: 1px solid red;
         .bodys_news {
             width: 80%;
             height: 700px;
@@ -29,13 +28,38 @@ html ,body {
             align-content: flex-start;
             flex-wrap: wrap;
             .news_one{
-                width: 48%;
-                height: 80px;
-                border: 1px solid red;
+                width: 49%;
+                height: 88px;
+                border: 1px solid silver;
                 margin-top: 16px;
-                display: flex;
-                justify-content: space-between;
+                // display: flex;
+                // justify-content: space-between;
+                img{
+                    width: 30%;
+                    height: 88px;
+                    display: inline-block;
+                }
+                .news_right{
+                    position: relative;
+                    p{
+                        position: absolute;
+                        top: -82px;
+                        left: 153px;
+                        font-weight: lighter;
+                    }
+                    span{
+                        position: absolute;
+                        top: -32px;
+                        left: 153px;
+                        font-size: 10px;
+                        color: gray;
+                    }
+                }
             }
+        }
+
+        .bodys_navs{
+            margin-top: -60px;
         }
     }
 }

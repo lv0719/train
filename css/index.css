@@ -243,7 +243,9 @@ body {
   width: 100%;
 }
 .trainOne .bodys .team_introd .team_body_five .one p {
+  display: inline-block;
   padding: 10px 10px;
+  margin-left: 5px;
 }
 .trainOne .footer {
   width: 1200px;

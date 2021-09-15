@@ -18,13 +18,15 @@
         </div>
         <div class="bodys">
             <div class="bodys_news">
-                <div class="news_one">
-                    <img src="../train/asset/asset/qr_code.jpg" alt="">
+                <!-- <div class="news_one">
+                    <div>
+                        <img src="../train/asset/asset/qr_code.jpg" alt="">
+                    </div>
                     <div class="news_right">
                         <p>www</p>
                         <span>dd</span>
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="bodys_navs">
                 <nav aria-label="Page navigation example">
@@ -68,8 +70,22 @@
             .then(function(res) {
                 arr = res.data.data
                 console.log(arr)
-                let bodys = document.getElementsByClassName('bodys')
-                console.log(bodys)
+                let bodys_news = document.getElementsByClassName('bodys_news')
+                let childHtml = ``
+                arr.forEach(item => {
+                    childHtml += `
+                        <div class="news_one">
+                            <div>
+                                <img src="${item.img}" alt="">
+                            </div>
+                            <div class="news_right">
+                                    <p>${item.title}</p>
+                                    <span>${item.keyword}</span>
+                            </div>
+                        </div>`
+                });
+                console.log(childHtml)
+                bodys_news[0].innerHTML = childHtml
             })
             .catch(err => console.log(err))
     </script>

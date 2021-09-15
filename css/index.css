@@ -31,65 +31,264 @@ body {
 .trainOne .header .rightNav li {
   color: white;
 }
+.trainOne .header .rightNav li a svg {
+  margin-top: -3px;
+}
 .trainOne .bodys {
   width: 1200px;
-  height: 1200px;
+  height: 3100px;
   margin: 0 auto;
   background: white;
-  border: 1px solid black;
 }
 .trainOne .bodys .service_scope {
   width: 100%;
 }
 .trainOne .bodys .service_scope .line_one {
+  width: 100%;
   position: relative;
   text-align: center;
-  top: 10px;
+  top: 20px;
   font-size: 15px;
-  color: gray;
-  font-weight: bolder;
+  color: black;
+  font-weight: lighter;
 }
-.trainOne .bodys .service_scope .line_one ::before {
+.trainOne .bodys .service_scope .line_one::before {
+  background: silver;
   content: "";
   height: 1px;
   width: 40%;
-  background: silver;
   position: absolute;
+  display: inline-block;
   top: 10px;
   left: 6%;
 }
-.trainOne .bodys .service_scope .line_one ::after {
+.trainOne .bodys .service_scope .line_one::after {
   content: "";
   height: 1px;
   width: 40%;
   background: silver;
   position: absolute;
+  display: inline-block;
   top: 10px;
   right: 6%;
 }
 .trainOne .bodys .service_scope .service_body {
-  width: 100%;
-  margin-top: 30px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
 }
 .trainOne .bodys .service_scope .service_body ul {
   display: flex;
   justify-content: space-around;
+  padding: 0;
+  margin: 0;
 }
 .trainOne .bodys .service_scope .service_body ul li {
+  list-style: none;
+  text-align: center;
+  font-size: xx-large;
+}
+.trainOne .bodys .service_scope .service_body ul li .li_img {
   width: 150px;
   height: 150px;
-  border: 1px solid red;
-  border-radius: 50%;
   overflow: hidden;
-  text-align: center;
 }
-.trainOne .bodys .service_scope .service_body ul li img {
+.trainOne .bodys .service_scope .service_body ul li .li_img img {
   width: 100%;
   height: 100%;
+  display: block;
+  border-radius: 50%;
+}
+.trainOne .bodys .team_introd {
+  width: 100%;
+}
+.trainOne .bodys .team_introd .line_two {
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+  color: black;
+  font-weight: lighter;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trainOne .bodys .team_introd .line_two::before,
+.trainOne .bodys .team_introd .line_two::after {
+  background: silver;
+  content: '';
+  height: 1px;
+  width: 40%;
+  position: absolute;
+  display: block;
+  top: 10px;
+}
+.trainOne .bodys .team_introd .line_two::before {
+  left: 6%;
+}
+.trainOne .bodys .team_introd .line_two::after {
+  right: 6%;
+}
+.trainOne .bodys .team_introd .team_body_one {
+  width: 88%;
+  height: 450px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.trainOne .bodys .team_introd .team_body_one .team_body_left {
+  width: 60%;
+  height: 100%;
+}
+.trainOne .bodys .team_introd .team_body_one .team_body_left .one {
+  font-size: x-large;
+}
+.trainOne .bodys .team_introd .team_body_one .team_body_left .two {
+  font-size: x-large;
+  color: gray;
+}
+.trainOne .bodys .team_introd .team_body_one .team_body_left p {
+  word-wrap: break-word;
+  color: grey;
+  padding: 1px 1px;
+}
+.trainOne .bodys .team_introd .team_body_one .team_body_right {
+  width: 38%;
+  height: 100%;
+  background: url(../asset/asset/article_1_1080p.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.trainOne .bodys .team_introd .line_three {
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+  color: gray;
+  font-weight: bolder;
+}
+.trainOne .bodys .team_introd .line_three::before {
+  content: '';
+  background: silver;
+  width: 88%;
+  height: 1px;
+  position: absolute;
+  top: 10px;
+  left: 6%;
+}
+.trainOne .bodys .team_introd .team_body_two {
+  width: 88%;
+  height: 450px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.trainOne .bodys .team_introd .team_body_two .team_body_left {
+  width: 60%;
+  height: 100%;
+}
+.trainOne .bodys .team_introd .team_body_two .team_body_left .one {
+  font-size: x-large;
+}
+.trainOne .bodys .team_introd .team_body_two .team_body_left .two {
+  font-size: x-large;
+  color: gray;
+}
+.trainOne .bodys .team_introd .team_body_two .team_body_left p {
+  word-wrap: break-word;
+  color: grey;
+  padding: 1px 1px;
+}
+.trainOne .bodys .team_introd .team_body_two .team_body_right {
+  width: 38%;
+  height: 100%;
+  background: url(../asset/asset/article_2_1080p.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.trainOne .bodys .team_introd .team_body_four {
+  margin-top: 20px;
+}
+.trainOne .bodys .team_introd .team_body_four .team_body_right {
+  width: 38%;
+  height: 100%;
+  background: url(../asset/asset/article_3_1080p.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.trainOne .bodys .team_introd .team_body_three .team_body_right {
+  width: 38%;
+  height: 100%;
+  background: url(../asset/asset/article_4_1080p.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.trainOne .bodys .team_introd .team_body_five {
+  width: 88%;
+  height: 230px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  font-size: 14px;
+  justify-content: space-between;
+}
+.trainOne .bodys .team_introd .team_body_five .one {
+  width: 23%;
+  height: 100%;
+  border-radius: 2%;
+  border: 1px solid silver;
+}
+.trainOne .bodys .team_introd .team_body_five .one img {
+  width: 100%;
+}
+.trainOne .bodys .team_introd .team_body_five .one p {
+  padding: 10px 10px;
 }
 .trainOne .footer {
   width: 1200px;
-  height: 100px;
+  height: 130px;
   margin: 0 auto;
-  background: hotpink;
+  background: azure;
+}
+.trainOne .footer .footer_top p {
+  text-align: center;
+}
+.trainOne .footer .footer_top p span {
+  padding: 6px;
+  font-size: x-small;
+  color: gray;
+}
+.trainOne .footer .footer_top p span svg {
+  margin-top: -3px;
+}
+.trainOne .footer .line {
+  position: relative;
+  text-align: center;
+  font-size: 15px;
+  color: gray;
+  font-weight: bolder;
+}
+.trainOne .footer .line::before {
+  content: '';
+  background: silver;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.trainOne .footer .footer_bottom {
+  text-align: center;
+  margin-top: 30px;
+}
+.trainOne .footer .footer_bottom img {
+  width: 50px;
+  height: 50px;
+}
+.trainOne .footer .footer_bottom span {
+  font-size: x-small;
+  color: gray;
+  display: inline-block;
+  margin-left: 10px;
 }

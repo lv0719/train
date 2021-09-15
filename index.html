@@ -22,18 +22,30 @@
                         <div class="collapse navbar-collapse" id="navbarText">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">
-                                        <i class="bi bi-house"></i> 首页
+                                    <a class="nav-link active" aria-current="page" href="./index.html">
+                                        <!-- <i class="bi bi-house"></i>  -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                                            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                                        </svg> 首页
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
-                                        <i class="bi bi-newspaper"></i>新闻
+                                    <a class="nav-link" href="./news.html">
+                                        <!-- <i class="bi bi-newspaper"></i> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-newspaper" viewBox="0 0 16 16">
+                                            <path d="M0 2.5A1.5 1.5 0 0 1 1.5 1h11A1.5 1.5 0 0 1 14 2.5v10.528c0 .3-.05.654-.238.972h.738a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 1 1 0v9a1.5 1.5 0 0 1-1.5 1.5H1.497A1.497 1.497 0 0 1 0 13.5v-11zM12 14c.37 0 .654-.211.853-.441.092-.106.147-.279.147-.531V2.5a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v11c0 .278.223.5.497.5H12z"/>
+                                            <path d="M2 3h10v2H2V3zm0 3h4v3H2V6zm0 4h4v1H2v-1zm0 2h4v1H2v-1zm5-6h2v1H7V6zm3 0h2v1h-2V6zM7 8h2v1H7V8zm3 0h2v1h-2V8zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1zm-3 2h2v1H7v-1zm3 0h2v1h-2v-1z"/>
+                                        </svg> 新闻
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">
-                                        <i class="bi bi-question-circle"></i>关于我们
+                                    <a class="nav-link" href="./about.html">
+                                        <!-- <i class="bi bi-question-circle"></i> -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                            <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+                                        </svg> 关于我们
                                     </a>
                                 </li>
                             </ul>
@@ -44,15 +56,20 @@
         </div>
         <div class="bodys">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="../train/asset/asset/banner_01_1080p.jpg" class="d-block w-100" alt="...">
+                        <img src="../train/asset/asset/banner_01_1080p.jpg" style="width:1600px; height:600px" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="../train/asset/asset/banner_02_1080p.jpg" class="d-block w-100" alt="...">
+                        <img src="../train/asset/asset/banner_02_1080p.jpg" style="width:1600px; height:600px" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="../train/asset/asset/banner_03_1080p.jpg" class="d-block w-100" alt="...">
+                        <img src="../train/asset/asset/banner_03_1080p.jpg" style="width:1600px; height:600px" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
@@ -65,61 +82,142 @@
                 </button>
             </div>
             <div class="service_scope">
-                <div>
-                    <div class="line_one">
-                        服务范围
-                    </div>
+                <div class="line_one">
+                    服务范围
                 </div>
                 <div class="service_body">
                     <ul>
                         <li>
-                            <img src="../train/asset/asset/section_01_1080p.jpg" alt="">
+                            <div class="li_img">
+                                <img src="../train/asset/asset/section_01_1080p.jpg" alt="wait">
+                            </div>
+                            <span>拯救地球</span>
                         </li>
                         <li>
-                            <img src="../train/asset/asset/section_02_1080p.jpg" alt="">
+                            <div class="li_img">
+                                <img src="../train/asset/asset/section_02_1080p.jpg" alt="wait">
+                            </div>
+                            <span>英雄合照</span>
                         </li>
                         <li>
-                            <img src="../train/asset/asset/section_03_1080p.jpg" alt="">
+                            <div class="li_img">
+                                <img src="../train/asset/asset/section_03_1080p.jpg" alt="wait">
+                            </div>
+                            <span>寻找原石</span>
                         </li>
                         <li>
-                            <img src="../train/asset/asset/section_04_1080p.jpg" alt="">
+                            <div class="li_img">
+                                <img src="../train/asset/asset/section_04_1080p.jpg" alt="wait">
+                            </div>
+                            <span>宇宙旅行</span>
                         </li>
+
                     </ul>
                 </div>
             </div>
+            <div class="team_introd">
+                <div class="line_two">
+                    团队介绍
+                </div>
+                <div class="team_body_one">
+                    <div class="team_body_left">
+                        <span class="one">汪達</span>&nbsp;&nbsp;
+                        <span class="two">馬克希莫夫</span>
+                        <p>
+                            快銀的雙胞胎姊姊(比快銀早出生30秒，此為漫畫原作設定)，原始設定是萬磁 王的女兒，鋼鐵人的情婦，和美國隊長也有一段地下情，於2014年底的漫击連載中修改設 定，緋紅女巫跟快銀是終極進化(High Evolutionary)基因實驗產生的基因改造人， 並非變種人， 並且有一-位之前未曾登場的雙胞胎姊妹Luminous。
+                        </p>
+                    </div>
+                    <div class="team_body_right"></div>
+                </div>
+                <div class="line_three"></div>
+                <div class="team_body_two">
+                    <div class="team_body_right"></div>
+                    <div class="team_body_left">
+                        <span class="one">黑寡妇</span>&nbsp;&nbsp;
+                        <span class="two">娜塔莉亞</span>
+                        <p>
+                            黑寡妇的首次登场是作为钢铁侠故事里的一个常驻的非制服的俄罗斯问谍角色出现在《悬疑故事》第52期(1964年4月出版)中。在漫回出版了五期之后，黑寡妇为了她的事业招募了-名对她痴迷的制服射手，而他就是随后成为超级英雄的鹰眼"。俄罗斯政府为黑寡妇提供了她的第一套制服和高科技武器，但她与美国政府产生嫌隙却 是在超级英雄团队系列漫画《复仇者》第29期( 1966年7月)出版后。
+                        </p>
+                    </div>
+                </div>
+                <div class="line_three"></div>
+                <div class="team_body_one team_body_four">
+                    <div class="team_body_left">
+                        <span class="one">獵鷹</span>&nbsp;&nbsp;
+                        <span class="two">山姆.威尔森</span>
+                        <p>
+                            在一个充斥着街头暴力与帮派斗争的黑人住宅区长大，他的牧师父亲为了阻止一场争斗而意外丧生，山姆强忍心中的悲痛与愤怒，尽可能保持理性地生活着，直到两年后一个走私贩子杀死了他的母亲，多年积怨的复仇情绪将山姆的性情彻底改变，一个备受尊敬的有志青年变成了为暴徒工作的诈欺犯。
+                        </p>
+                    </div>
+                    <div class="team_body_right right_speacialOne"></div>
+                </div>
+                <div class="line_three"></div>
+                <div class="team_body_two team_body_three">
+                    <div class="team_body_right reight_spaceialTwo"></div>
+                    <div class="team_body_left">
+                        <span class="one">洛基</span>&nbsp;&nbsp;
+                        <span class="two">北欧神话</span>
+                        <p>
+                            首先，他是詭計與欺骗的大師，但他並不是十 惡不救的，他經常在作弄別人後與其和好，比如說剪断希芙的頭要後又使其復原，協助夏基虞走伊登又将其救回。他最初是善惡兼半，或者說他的惡亦非出於本意。但後來，随著洛基殺死奥丁之子巴德爾，漸漸的真正成了斯堪的納維亞諸神的敌人。众神视洛基为恶神，并将他逐出阿师加德。
+                        </p>
+                    </div>
+                </div>
+                <div class="line_two">新闻动态</div>
+                <div class="team_body_five"></div>
+            </div>
         </div>
         <div class="footer">
-            3
+            <div class="footer_top">
+                <p>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        </svg>
+                        福州市仓山区
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/>
+                        </svg>
+                        Robin@hotmail.com
+                    </span>
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                            <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                        </svg>
+                        000-000-000
+                    </span>
+                </p>
+            </div>
+            <div class="line"></div>
+            <div class="footer_bottom">
+                <img src="../train/asset/asset/qr_code.jpg" alt="">
+                <span>@ 2021 Company, Inc</span>
+            </div>
         </div>
     </div>
+    <script src="../train/js/axios.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
-        function Axios(type = 'GET', url, param = null) {
-            if (type == 'POST') {
-                return new Promise((resolve, reject) => {
-                    axios.post(url, param && {...param
-                        })
-                        .then(res => resolve(res))
-                        .catch(err => reject(err))
-                })
-            } else {
-                return new Promise((resovle, reject) => {
-                    axios.get(url, param && {
-                            params: {...param
-                            }
-                        })
-                        .then(res => resovle(res))
-                        .catch(err => reject(err))
-                })
-            }
-        }
-        const baseUrl = 'http://mock-api.com/ln0epdKR.mock/api/v1/rest/counts'
-        window.onload = function() {
-            Axios('GET', baseUrl, {
-                age: 11
-            }).then(res => console.log(res)).catch(err => console.log(err))
-        }
+        var arr = []
+            // const baseUrl = 'http://mock-api.com/ln0epdKR.mock/api/v1/rest/counts'
+        const baseUrl = 'https://www.fastmock.site/mock/d8c33ca26a546a3c9be78ee13f714990/t1-0fficial/api/news'
+        Axios('GET', baseUrl, {})
+            .then(function(res) {
+                arr = res.data.data
+                let team_body_five = document.getElementsByClassName('team_body_five')
+                let someArr = arr.splice(0, 4)
+                let childHtml = ``
+                console.log(someArr)
+                someArr.forEach(item => {
+                    childHtml += `<div class="one"><div class="img"><img src="${item.img}" alt="空">
+                        </div><p>${item.title}</p></div>`
+                });
+                team_body_five[0].innerHTML = childHtml
+            })
+            .catch(err => console.log(err))
     </script>
 
 </body>

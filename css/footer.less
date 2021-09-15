@@ -1,0 +1,49 @@
+.footer{
+    width: 1200px;
+    height: 130px;
+    margin: 0 auto;
+    background: azure;
+    .footer_top{
+        p{
+            text-align: center;
+            span{
+                padding: 6px;
+                font-size: x-small;
+                color: gray;
+                svg{
+                    margin-top: -3px;
+                }
+            }
+        }
+    }
+    .line{
+            position: relative;
+            text-align: center;
+            font-size: 15px;
+            color: gray;
+            font-weight: bolder;
+            &::before{
+                content: '';
+                background: silver;
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+    }
+    .footer_bottom{
+        text-align: center;
+        margin-top: 30px;
+        img{
+            width: 50px;
+            height: 50px;
+        }
+        span{
+            font-size: x-small;
+            color: gray;
+            display: inline-block;
+            margin-left: 10px;
+        }
+    }
+}

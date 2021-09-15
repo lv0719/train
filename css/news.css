@@ -36,6 +36,7 @@ body {
   height: 88px;
   border: 1px solid silver;
   margin-top: 16px;
+  border-radius: 4px;
 }
 .content .bodys .bodys_news .news_one img {
   width: 30%;

@@ -5,55 +5,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>a</title>
-    <link rel="stylesheet" href="../train/css/news.css">
+    <title>新闻内容页</title>
+    <link rel="stylesheet" href="../train/css/news-details.css">
+    <link rel="stylesheet" href="../train/css/header.css">
+    <link rel="stylesheet" href="../train/css/footer.css">
+    <!-- <link rel="stylesheet" href="."> -->
+    <!-- <link rel="stylesheet" href="../train/css/footer.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="content">
-        <div id="headerpage">
-            <!-- <iframe class="iframeOne" MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="./header.html" width="100%" height="auto"></iframe> -->
+    <div class="content" id="contentHeight">
+        <div id="headerpage"></div>
+        <div class="title">
+            <span class="line"></span> <span id="title"></span>
         </div>
-        <div class="bodys">
-            <div class="bodys_news">
-
-            </div>
-            <div class="bodys_navs">
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item">
-                            <a class="page-link" href="#">Previous</a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                            <a class="page-link" href="#">Next</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+        <div id="bodys"></div>
         <div id="footerpage">
             <!-- <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="./footer.html" width="100%" height="auto"></iframe> -->
         </div>
     </div>
-
+    <script src="../train/js/axios.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
-        $(function() {
-            /*公共部分
-             * 导航栏
-             * footer CopyRight
-             */
+        $(document).ready(function() {
             $("#headerpage").load("header.html");
             $("#footerpage").load("footer.html");
         });
+        window.onload = function() {
+                const news_code = window.location.search.split('=')[1]
+                const baseUrl = 'https://www.fastmock.site/mock/d8c33ca26a546a3c9be78ee13f714990/t1-0fficial/api/news/' + news_code
+                Axios('GET', baseUrl)
+                    .then(function(res) {
+                        let text = res.data.data.text
+                        let titles = res.data.data.title
+                        let bodys = document.getElementById('bodys')
+                        let title = document.getElementById('title')
+                        bodys.innerHTML = text
+                        title.innerHTML = titles
+                        if (text == "") {
+                            document.getElementById('footerpage').setAttribute('class', 'posiBottom')
+                        }
+                    })
+                    .catch(err => {
+                        console.log(err)
+                    })
+            }
+            // 获取浏览器视口宽高度
+            // var w = document.documentElement.clientWidth || document.body.clientWidth;
+            // var h = document.documentElement.clientHeight || document.body.clientHeight;
+            // //
+            // var w1 = document.documentElement.scrollWidth || document.body.scrollWidth;
+            // var h1 = document.documentElement.scrollHeight || document.body.scrollHeight;
+            // var w2 = document.documentElement.offsetWidth || document.body.offsetWidth;
+            // var h2 = document.documentElement.offsetHeight || document.body.offsetHeight;
     </script>
+
 </body>
 
 </html>

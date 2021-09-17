@@ -5,32 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>a</title>
+    <title>新闻列表页</title>
     <link rel="stylesheet" href="../train/css/news.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://cdn.bootcss.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="content">
-        <div id="headerpage">
-            <!-- <iframe class="iframeOne" MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="./header.html" width="100%" height="auto"></iframe> -->
-        </div>
+    <div class="content" id="contentHeight">
+        <div id="headerpage"></div>
         <div class="bodys">
-            <div class="bodys_news">
+            <div class="bodys_news" id="bodys-news">
                 <!-- <div class="news_one">
                     <div>
                         <img src="../train/asset/asset/qr_code.jpg" alt="">
                     </div>
                     <div class="news_right">
-                        <p>www</p>
+                        <p></p>
                         <span>dd</span>
                     </div>
                 </div> -->
             </div>
             <div class="bodys_navs">
                 <nav aria-label="Page navigation example">
-                    <ul class="pagination justify-content-center">
+                    <ul class="pagination justify-content-center" id="pagination">
                         <li class="page-item">
                             <a class="page-link" href="#">上一页</a>
                         </li>
@@ -44,50 +44,79 @@
                 </nav>
             </div>
         </div>
-        <div id="footerpage">
-            <!-- <iframe MARGINWIDTH=0 MARGINHEIGHT=0 HSPACE=0 VSPACE=0 FRAMEBORDER=0 SCROLLING=no src="./footer.html" width="100%" height="auto"></iframe> -->
-        </div>
+        <div id="footerpage"></div>
     </div>
     <script src="../train/js/axios.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script>
-        $(function() {
-            /*公共部分
-             * 导航栏
-             * footer CopyRight
-             */
+        const baseUrl = 'https://www.fastmock.site/mock/d8c33ca26a546a3c9be78ee13f714990/t1-0fficial/api/news'
+        const pagination = document.getElementById('pagination')
+        var initNumber = 1;
+        $(document).ready(function() {
             $("#headerpage").load("header.html");
             $("#footerpage").load("footer.html");
         });
-        var arr = []
-        const baseUrl = 'https://www.fastmock.site/mock/d8c33ca26a546a3c9be78ee13f714990/t1-0fficial/api/news'
-        Axios('GET', baseUrl, {
-                page: 1,
-                page_size: 10
-            })
-            .then(function(res) {
-                arr = res.data.data
-                console.log(arr)
-                let bodys_news = document.getElementsByClassName('bodys_news')
-                let childHtml = ``
-                arr.forEach(item => {
-                    childHtml += `
-                        <div class="news_one">
-                            <div>
-                                <img src="${item.img}" alt="">
-                            </div>
-                            <div class="news_right">
-                                    <p>${item.title}</p>
-                                    <span>${item.keyword}</span>
-                            </div>
-                        </div>`
-                });
-                console.log(childHtml)
-                bodys_news[0].innerHTML = childHtml
-            })
-            .catch(err => console.log(err))
+
+        function pageAxios(page, baseUrl) {
+            Axios('GET', baseUrl, {
+                    page: page,
+                    page_size: 10
+                })
+                .then(function(res) {
+                    let arr = res.data.data
+                    let bodys_news = document.getElementsByClassName('bodys_news')
+                    let childHtml = ``
+                    arr.forEach(item => {
+                        childHtml += `
+                            <div class="news_one" id="${item.code}">
+                                <div>
+                                    <img src="${item.img}" alt="">
+                                </div>
+                                <div class="news_right">
+                                        <p><a href="${window.location.origin+'/train/news-detail.html?code='+item.code}">${item.title}</a></p>
+                                        <span>${item.keyword}</span>
+                                </div>
+                            </div>`
+                    });
+                    bodys_news[0].innerHTML = childHtml
+                })
+                .catch(err => console.log(err))
+        }
+
+        pageAxios(1, baseUrl) // 首次加载请求新闻
+
+
+        //实现分页加载数据
+        pagination.addEventListener('click', function(event) {
+            event.preventDefault()
+            event = event || window.event
+            var targetElement = event.target || event.srcElement
+            let numberValue = targetElement.innerHTML
+            if (numberValue == '上一页') {
+                if (initNumber == 1) {
+                    alert('已经是第一页了！');
+                    console.log('已经是第一页')
+                    return
+                } else {
+                    let leftNumber = --initNumber
+                    pageAxios(leftNumber, baseUrl)
+                }
+            } else if (numberValue == '下一页') {
+                if (initNumber == 3) {
+                    alert('已经是最后一页了！');
+                    console.log('已经是最后一页')
+                    return
+                } else {
+                    let rightNumber = ++initNumber
+                    pageAxios(rightNumber, baseUrl)
+                }
+            } else {
+                initNumber = numberValue
+                pageAxios(numberValue, baseUrl)
+            }
+        })
     </script>
 </body>
 

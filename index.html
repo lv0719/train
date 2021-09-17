@@ -166,7 +166,7 @@
                 <div class="team_body_five"></div>
             </div>
         </div>
-        <div class="footer">
+        <div class="footer" id="footer">
             <div class="footer_top">
                 <p>
                     <span>
@@ -218,6 +218,18 @@
                 team_body_five[0].innerHTML = childHtml
             })
             .catch(err => console.log(err))
+
+        // var w = document.documentElement.clientWidth || document.body.clientWidth;
+        // var h = document.documentElement.clientHeight || document.body.clientHeight;
+        // var w1 = document.documentElement.scrollWidth || document.body.scrollWidth;
+        // var h1 = document.documentElement.scrollHeight || document.body.scrollHeight;
+        // var w2 = document.documentElement.offsetWidth || document.body.offsetWidth;
+        // var h2 = document.documentElement.offsetHeight || document.body.offsetHeight;
+
+        // var footerpage = document.getElementById('footer')
+        // console.log(h1 - footerpage.offsetHeight > w2)
+        // console.log(w, h, w1, h1, w2, h2)
+        // console.log(document.body.offsetHeight, document.body.clientHeight)
     </script>
 
 </body>

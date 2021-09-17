@@ -1,6 +1,6 @@
 html ,body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    min-height: 100vh;
     text-decoration: none;
     list-style: none;
 }
@@ -11,17 +11,64 @@ html ,body {
 .content {
     width: 100%;
     height: 80%;
-    .iframeOne{
-        width: 100%;
-        height: 80px;
+    
+    .footer{
+        width: 1200px;
+        height: 130px;
+        margin: 0 auto;
+        background: azure;
+        .footer_top{
+            p{
+                text-align: center;
+                span{
+                    padding: 6px;
+                    font-size: x-small;
+                    color: gray;
+                    svg{
+                        margin-top: -3px;
+                    }
+                }
+            }
+        }
+        .line{
+                position: relative;
+                text-align: center;
+                font-size: 15px;
+                color: gray;
+                font-weight: bolder;
+                &::before{
+                    content: '';
+                    background: silver;
+                    width: 100%;
+                    height: 1px;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+        }
+        .footer_bottom{
+            text-align: center;
+            margin-top: 30px;
+            img{
+                width: 50px;
+                height: 50px;
+            }
+            span{
+                font-size: x-small;
+                color: gray;
+                display: inline-block;
+                margin-left: 10px;
+            }
+        }
     }
+
     .bodys{
         width: 1200px;
         height: auto;
         margin: 0 auto;
         .bodys_news {
             width: 80%;
-            height: 700px;
+            height: auto;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -43,10 +90,20 @@ html ,body {
                 .news_right{
                     position: relative;
                     p{
+                        &:hover{
+                            cursor: pointer;
+                        }
                         position: absolute;
                         top: -82px;
                         left: 153px;
+                        padding-right: 3px;
+                        font-size: 15px;
                         font-weight: lighter;
+                        a{
+                            text-decoration: none;
+                            list-style: none;
+                            color: black;
+                        }
                     }
                     span{
                         position: absolute;
@@ -60,7 +117,21 @@ html ,body {
         }
 
         .bodys_navs{
-            margin-top: -60px;
+            margin-top: 60px;
+            nav{
+                ul{
+                    #blue{
+                        background: blue;
+                        color: white;
+                    }
+                }
+            }
         }
+    }
+    #footerpage{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
     }
 }

@@ -9,42 +9,44 @@ body {
   margin: 0;
   padding: 0;
 }
-.content {
-  width: 100%;
-  height: auto;
-}
-.content .title {
-  width: 1200px;
-  height: 60px;
-  margin: 0 auto;
-  background: #002;
-}
-.content .title .line {
-  position: relative;
-}
-.content .title .line::before {
-  content: '';
-  background: red;
-  width: 10px;
-  height: 40px;
-  position: absolute;
-  left: 30px;
-}
-.content .title #title {
-  color: white;
-  display: inline-block;
-  margin-left: 54px;
-  font-size: 26px;
-}
-.content #bodys {
-  width: 1200px;
-  height: auto;
-  margin: 0 auto;
-  padding: 10px 100px;
-}
-.content .posiBottom {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+@media screen and (min-width: 1000px) {
+  .content {
+    width: 100%;
+    height: auto;
+  }
+  .content .title {
+    width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    background: #002;
+  }
+  .content .title .line {
+    position: relative;
+  }
+  .content .title .line::before {
+    content: '';
+    background: red;
+    width: 10px;
+    height: 40px;
+    position: absolute;
+    left: 30px;
+  }
+  .content .title #title {
+    color: white;
+    display: inline-block;
+    margin-left: 54px;
+    font-size: 26px;
+  }
+  .content #bodys {
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+    padding: 10px 100px;
+  }
+  .content .posiBottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }

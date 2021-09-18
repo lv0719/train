@@ -8,64 +8,14 @@ html ,body {
     margin: 0;
     padding: 0;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
 
     .content {
-        width: 100%;
+        max-width: 1200px;
         height: 80%;
-        
-        .footer{
-            width: 1200px;
-            height: 130px;
-            margin: 0 auto;
-            background: azure;
-            .footer_top{
-                p{
-                    text-align: center;
-                    span{
-                        padding: 6px;
-                        font-size: x-small;
-                        color: gray;
-                        svg{
-                            margin-top: -3px;
-                        }
-                    }
-                }
-            }
-            .line{
-                    position: relative;
-                    text-align: center;
-                    font-size: 15px;
-                    color: gray;
-                    font-weight: bolder;
-                    &::before{
-                        content: '';
-                        background: silver;
-                        width: 100%;
-                        height: 1px;
-                        position: absolute;
-                        top: 0px;
-                        left: 0px;
-                    }
-            }
-            .footer_bottom{
-                text-align: center;
-                margin-top: 30px;
-                img{
-                    width: 50px;
-                    height: 50px;
-                }
-                span{
-                    font-size: x-small;
-                    color: gray;
-                    display: inline-block;
-                    margin-left: 10px;
-                }
-            }
-        }
-
+        margin: 0 auto;
         .bodys{
-            width: 1200px;
+            max-width: 1200px;
             height: auto;
             margin: 0 auto;
             .bodys_news {
@@ -140,11 +90,159 @@ html ,body {
 }
 
 // 适配平板端
-@media screen and (min-width: 640px) and (max-width: 1000px){
+@media screen and (min-width: 640px) and (max-width: 768px){
+    .content {
+        width: 100%;
+        height: 80%;
+        .bodys{
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+            margin-bottom: 140px;
+            .bodys_news {
+                width: 90%;
+                height: auto;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-content: flex-start;
+                flex-wrap: wrap;
+                .news_one{
+                    width: 49%;
+                    // height: 88px;
+                    border: 1px solid silver;
+                    margin-top: 16px;
+                    border-radius: 4px;
+                    // display: inline-flex;
+                    // justify-content: space-between;
+                    img{
+                        width: 50%;
+                        height: 106px;
+                        display: inline-block;
+                    }
+                    .news_right{
+                        position: relative;
+                        p{
+                            &:hover{
+                                cursor: pointer;
+                            }
+                            position: absolute;
+                            top: -100px;
+                            left: 175px;
+                            padding-right: 3px;
+                            font-size: 15px;
+                            font-weight: lighter;
+                            a{
+                                text-decoration: none;
+                                list-style: none;
+                                color: black;
+                            }
+                        }
+                        span{
+                            position: absolute;
+                            top: -26px;
+                            left: 175px;
+                            font-size: 10px;
+                            color: gray;
+                        }
+                    }
+                }
+            }
 
+            .bodys_navs{
+                margin-top: 60px;
+                nav{
+                    ul{
+                        #blue{
+                            background: blue;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        #footerpage{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
 }
 
 // 适配移动端
 @media screen and (max-width: 639px){
+    .content {
+        width: 100%;
+        height: 80%;
+        .bodys{
+            width: 100%;
+            height: auto;
+            margin: 0 auto;
+            .bodys_news {
+                width: 80%;
+                height: auto;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                .news_one{
+                    width: 100%;
+                    height: auto;
+                    border: 1px solid silver;
+                    margin-top: 16px;
+                    border-radius: 4px;
+                    // display: flex;
+                    // justify-content: space-between;
+                    img{
+                        width: 100%;
+                        height: 180px;
+                        display: inline-block;
+                    }
+                    .news_right{
+                        position: relative;
+                        p{
+                            &:hover{
+                                cursor: pointer;
+                            }
+                            margin-top: 10px;
+                            font-size: 15px;
+                            margin-left: 10px;
+                            font-weight: lighter;
+                            a{
+                                text-decoration: none;
+                                list-style: none;
+                                color: black;
+                            }
+                        }
+                        span{
+                            font-size: 10px;
+                            color: gray;
+                            display: inline-block;
+                            margin-bottom: 10px;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
 
+            .bodys_navs{
+                margin-top: 60px;
+                nav{
+                    ul{
+                        #blue{
+                            background: blue;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        // #footerpage{
+        //     position: ;
+        //     bottom: 0;
+        //     left: 0;
+        //     right: 0;
+        // }
+    }
 }

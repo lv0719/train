@@ -1,21 +1,14 @@
 .header {
-  max-width: 1200px;
-  height: 80px;
-  background-color: #002;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-.header p {
-  display: inline-block;
-  color: white;
-  font-size: x-large;
-  margin: auto 15px;
+.header .rightNav {
+  width: 100%;
 }
-.header .rightNav li {
+.header li {
   color: white;
 }
-.header .rightNav li a svg {
+.header li a svg {
   margin-top: -3px;
 }

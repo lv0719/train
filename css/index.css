@@ -16,23 +16,15 @@ body {
   }
   .trainOne .header {
     width: 1200px;
-    height: 80px;
-    background-color: #002;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
-  .trainOne .header p {
-    display: inline-block;
-    color: white;
-    font-size: x-large;
-    margin: auto 15px;
+  .trainOne .header .rightNav {
+    width: 100%;
   }
-  .trainOne .header .rightNav li {
+  .trainOne .header li {
     color: white;
   }
-  .trainOne .header .rightNav li a svg {
+  .trainOne .header li a svg {
     margin-top: -3px;
   }
   .trainOne .bodys {
@@ -308,24 +300,10 @@ body {
   }
   .trainOne .header {
     width: 1200px;
-    height: 80px;
-    background-color: #002;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
-  .trainOne .header p {
-    display: inline-block;
-    color: white;
-    font-size: x-large;
-    margin: auto 15px;
-  }
-  .trainOne .header .rightNav li {
-    color: white;
-  }
-  .trainOne .header .rightNav li a svg {
-    margin-top: -3px;
+  .trainOne .header .rightNav {
+    width: 100%;
   }
   .trainOne .bodys {
     width: 1200px;
@@ -594,19 +572,10 @@ body {
     height: 100%;
   }
   .trainOne .header {
-    max-width: 100%;
-    height: 80px;
-    background-color: #002;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
   }
-  .trainOne .header p {
-    display: inline-block;
-    color: white;
-    font-size: x-large;
-    margin: auto 15px;
+  .trainOne .header .rightNav {
+    width: 100%;
   }
   .trainOne .header .rightNav li {
     color: white;

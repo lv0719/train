@@ -42,7 +42,7 @@
                   d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
                 />
               </svg>
-              <a id="mapPoint" href="geopoint:119.31543, 26.04335"
+              <a id="mapPoint" href="geopoint:104.079455, 30.546116"
                 >福州市仓山区</a
               >
             </span>
@@ -147,11 +147,6 @@
       // }
 
       // initMap(116.328103, 39.900835); //创建和初始化地图
-      // var mapPoint = document.getElementById('mapPoint')
-      // mapPoint.addEventListener('click', function(e) {
-      //     e.preventDefault()
-      //     initMap(119.31543, 26.04335)
-      // })
 
       var map = new BMapGL.Map("bodys_map");
       map.centerAndZoom(new BMapGL.Point(104.079455, 30.546116), 18);
@@ -179,6 +174,12 @@
         fontFamily: "微软雅黑",
       });
       map.addOverlay(label);
+
+      var mapPoint = document.getElementById("mapPoint");
+      mapPoint.addEventListener("click", function (e) {
+        e.preventDefault();
+        map.centerAndZoom(new BMapGL.Point(104.079455, 30.546116), 18);
+      });
 
       var details = document.getElementById("details");
       details.innerHTML =
